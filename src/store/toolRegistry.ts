@@ -1,0 +1,138 @@
+import React from "react";
+import { ToolDefinition } from "@/types/tool";
+
+const tools: ToolDefinition[] = [
+  // Encoders / Decoders
+  {
+    id: "base64",
+    label: "Base64",
+    category: "Encoders / Decoders",
+    icon: "Lock",
+    description: "Encode and decode Base64 strings",
+    keywords: ["base64", "encode", "decode", "binary"],
+    component: React.lazy(() => import("@/tools/base64")),
+  },
+  {
+    id: "url-encoder",
+    label: "URL Encoder",
+    category: "Encoders / Decoders",
+    icon: "Link",
+    description: "Encode and decode URL components",
+    keywords: ["url", "encode", "decode", "percent", "uri"],
+    component: React.lazy(() => import("@/tools/url-encoder")),
+  },
+  {
+    id: "jwt-decoder",
+    label: "JWT Decoder",
+    category: "Encoders / Decoders",
+    icon: "Ticket",
+    description: "Decode and inspect JWT tokens",
+    keywords: ["jwt", "json web token", "decode", "auth", "bearer"],
+    component: React.lazy(() => import("@/tools/jwt-decoder")),
+  },
+  // Formatters
+  {
+    id: "json-formatter",
+    label: "JSON Formatter",
+    category: "Formatters",
+    icon: "Braces",
+    description: "Format, validate, and minify JSON",
+    keywords: ["json", "format", "pretty", "minify", "validate"],
+    component: React.lazy(() => import("@/tools/json-formatter")),
+  },
+  // Generators
+  {
+    id: "hash-generator",
+    label: "Hash Generator",
+    category: "Generators",
+    icon: "Hash",
+    description: "Generate MD5, SHA1, SHA256, SHA512 hashes",
+    keywords: ["hash", "md5", "sha1", "sha256", "sha512", "checksum"],
+    component: React.lazy(() => import("@/tools/hash-generator")),
+  },
+  {
+    id: "uuid-generator",
+    label: "UUID Generator",
+    category: "Generators",
+    icon: "Fingerprint",
+    description: "Generate random UUIDs (v4)",
+    keywords: ["uuid", "guid", "random", "unique", "id"],
+    component: React.lazy(() => import("@/tools/uuid-generator")),
+  },
+  {
+    id: "lorem-ipsum",
+    label: "Lorem Ipsum",
+    category: "Generators",
+    icon: "AlignLeft",
+    description: "Generate placeholder Lorem Ipsum text",
+    keywords: ["lorem", "ipsum", "placeholder", "dummy", "text"],
+    component: React.lazy(() => import("@/tools/lorem-ipsum")),
+  },
+  // Text
+  {
+    id: "text-diff",
+    label: "Text Diff",
+    category: "Text",
+    icon: "GitCompare",
+    description: "Compare two texts and highlight differences",
+    keywords: ["diff", "compare", "text", "difference", "change"],
+    component: React.lazy(() => import("@/tools/text-diff")),
+  },
+  {
+    id: "text-case",
+    label: "Text Case Converter",
+    category: "Text",
+    icon: "CaseSensitive",
+    description: "Convert text between different cases",
+    keywords: ["case", "camel", "snake", "kebab", "pascal", "upper", "lower"],
+    component: React.lazy(() => import("@/tools/text-case")),
+  },
+  {
+    id: "markdown-preview",
+    label: "Markdown Preview",
+    category: "Text",
+    icon: "FileText",
+    description: "Live Markdown editor with HTML preview",
+    keywords: ["markdown", "md", "preview", "html", "render"],
+    component: React.lazy(() => import("@/tools/markdown-preview")),
+  },
+  {
+    id: "regex-tester",
+    label: "Regex Tester",
+    category: "Testers",
+    icon: "Regex",
+    description: "Test regular expressions with live match highlighting",
+    keywords: ["regex", "regexp", "regular expression", "pattern", "match"],
+    component: React.lazy(() => import("@/tools/regex-tester")),
+  },
+  // Converters
+  {
+    id: "color-converter",
+    label: "Color Converter",
+    category: "Converters",
+    icon: "Palette",
+    description: "Convert between HEX, RGB, and HSL color formats",
+    keywords: ["color", "hex", "rgb", "hsl", "convert", "colour"],
+    component: React.lazy(() => import("@/tools/color-converter")),
+  },
+  {
+    id: "number-base",
+    label: "Number Base Converter",
+    category: "Converters",
+    icon: "Binary",
+    description: "Convert between binary, octal, decimal, and hex",
+    keywords: ["binary", "octal", "decimal", "hex", "base", "number"],
+    component: React.lazy(() => import("@/tools/number-base")),
+  },
+  {
+    id: "unix-timestamp",
+    label: "Unix Timestamp",
+    category: "Converters",
+    icon: "Timer",
+    description: "Convert Unix timestamps to human-readable dates",
+    keywords: ["unix", "timestamp", "epoch", "date", "time", "convert"],
+    component: React.lazy(() => import("@/tools/unix-timestamp")),
+  },
+];
+
+export default tools;
